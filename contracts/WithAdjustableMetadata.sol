@@ -21,12 +21,12 @@ contract WithAdjustableMetadata is Ownable, WithMetadata {
 
     }
 
-
     function adjustName(string _name) 
         public
         onlyOwner
     {
         name = _name;
+        emit AdjustedName(_name);
     }
 
     function adjustDescription(string _description) 
@@ -34,6 +34,7 @@ contract WithAdjustableMetadata is Ownable, WithMetadata {
         onlyOwner
     {
         description = _description;
+        emit AdjustedDescription(_description);
     }
 
     function adjustMetadata(string _metadata)
@@ -41,5 +42,6 @@ contract WithAdjustableMetadata is Ownable, WithMetadata {
         onlyOwner
     {
         metadata = _metadata;
+        emit AdjustedMetadata(_metadata);
     }
 }
