@@ -17,9 +17,6 @@ contract('Writ', function([owner, _, other]) {
     const META = "<null>";
     const DATA = "<PLACEHOLDER>";
 
-    // const owner = accounts[0];
-    // const other = accounts[1];
-
     before(async function(){
         this.writContract =
             await Writ.new(NAME, DESCRIPTION, META, DATA);
